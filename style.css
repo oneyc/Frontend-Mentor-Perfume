@@ -3,14 +3,25 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+*{
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
 body{
     background-color: hsl(30, 38%, 92%);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .card-container{
+    display:flex;
+    flex-direction: column;
     background-color: white;
     width: 300px;
     min-height: 500px;
@@ -21,9 +32,15 @@ body{
 .card-img{
     width: 100%;
 }
-.card-img img{
+.card-img .image-mobile{
     width: 100%;
+    display:block;
 }
+.card-img .image-desktop{
+    width: 100%;
+    display:none;
+}
+
 .card-content{
     padding: 1.25rem;
 }
@@ -37,7 +54,8 @@ body{
     letter-spacing: 0.25rem;
 }
 .card-content h2{
-    font-size: 2rem;
+    font-family: "Fraunces", serif;
+    font-size: 2.2rem;
     color: hsl(212, 21%, 14%);
     margin: 0.5rem 0rem;
 }
@@ -47,6 +65,9 @@ body{
     line-height: 1.5rem;
     color: hsl(228, 12%, 48%);
     margin: 1rem 0rem;
+}
+.card-content .price-container{
+    display: flex;
 }
 .card-content strong{
     font-family: "Fraunces";
@@ -64,17 +85,57 @@ body{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 2.5rem;
+    height: 2.6rem;
     margin-top: 1rem;
     color: white;
     font-weight: bold;
     background-color: hsl(158, 36%, 37%);
     border: none;
     border-radius: 0.4rem;
-
 }
 
 .card-content .text-cart{
     font-size:0.8rem;
     margin-left: 0.5rem; 
+}
+
+@media (min-width:1400px){ 
+    .card-container{
+        flex-direction: row;
+        width: 600px;
+    }
+
+    .card-img{
+        width: 50%;
+        height: 100%;
+    }
+    .card-img .image-mobile{
+        width: 100%;
+        display:none;
+    }
+    .card-img .image-desktop{
+        width: 100%;
+        height: 100%;
+        display:block;
+        object-fit: cover;
+    }
+    .card-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        padding: 1.8rem;
+    }
+
+    .card-content h2{
+        font-size: 2.5rem;
+        margin: 0rem;
+    }
+    .card-content p{
+        margin: 0rem;
+    }
+    .card-content button{
+        margin-top: 0rem;
+
+    }
 }
