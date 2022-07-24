@@ -1,7 +1,9 @@
 # Frontend Mentor - Product preview card component
 
+## My Solution (Mobile)
 ![My Solution (Mobile)](./showcase/mobile-one.png)
 
+## My Solution (Desktop)
 ![My Solution (Desktop)](./showcase/desktop-one.png)
 
 ## Welcome! 👋
